@@ -62,7 +62,7 @@ sudo apt-get update
 sudo apt-get install -y kubeadm=1.22.1-00 kubelet=1.22.1-00 kubectl=1.22.1-00
 
 # Now install the cp using the kubeadm.yaml file from tarball
-sudo kubeadm init --config=$(find / -name kubeadm.yaml 2>/dev/null )
+sudo kubeadm init --config=$(find / -name kubeadm.yaml 2>/dev/null ) --control-plane-endpoint `curl ifconfig.me && echo ""`
 
 sleep 5
 
