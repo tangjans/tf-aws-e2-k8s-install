@@ -1,18 +1,5 @@
 #!/bin/bash
-#/* **************** LFD259:2021-10-13 s_02/k8scp.sh **************** */
-#/*
-# * The code herein is: Copyright the Linux Foundation, 2021
-# *
-# * This Copyright is retained for the purpose of protecting free
-# * redistribution of source.
-# *
-# *     URL:    https://training.linuxfoundation.org
-# *     email:  info@linuxfoundation.org
-# *
-# * This code is distributed under Version 2 of the GNU General Public
-# * License, which you should have received with the source.
-# *
-# */
+
 #Version 1.22.1
 
 # Bring node to current versions and install an editor and other software
