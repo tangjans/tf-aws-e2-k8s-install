@@ -5,3 +5,9 @@ This is an Infrastructure as Code (IaC) collection of Terraform scripts to boots
 * AWS account
 * AWS CLI installed
 * Terraform CLI installed
+* AWS IAM credentials with appropriate permissions created with ACCESS KEY and SECRET ACCESS KEY exported as environment variables e.g.:
+
+````
+$ export AWS_ACCESS_KEY_ID="AKIAXOUKCW2SN25QPM6X"
+$ export AWS_SECRET_ACCESS_KEY="GgIsdRBehE3pZD2GVpuomry8WmkXUvJ77psAhZ70"
+````

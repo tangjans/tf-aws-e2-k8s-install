@@ -6,22 +6,6 @@ variable "aws_region" {
 variable "key_name" {
   default = "k8s"
 }
-/*
-variable "shared_credentials_file" {
-  description = "The location of the AWS shared credentials file (e.g. ~/.aws/credentials)"
-  default = "~/.aws/credentials"
-}
-
-$ export AWS_ACCESS_KEY_ID="AKIAXOUKCW2SN25QPM6X"
-$ export AWS_SECRET_ACCESS_KEY="GgIsdRBehE3pZD2GVpuomry8WmkXUvJ77psAhZ70"
-
-sudo curl https://raw.githubusercontent.com/tangjans/tf-aws-e2-k8s-install/main/scripts/k8-install.sh | sh
-
-variable "profile" {
-  description = "The profile to use"
-  default = "jasonxytan_admin"
-}
-*/
 
 variable "tag_name" {
   description = "The name to tag AWS resources with"
