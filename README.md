@@ -19,8 +19,11 @@ $ terraform plan
 $ terraform apply
 ````
 * After the "terraform apply" command, you'll need to respond "yes" to ssh connections to both your master and worker nodes.
-* Definition of Done - Post successful resource creation on AWS, run:
+* Definition of Done - Post successful resource creation on AWS, run and see both the Master and Worker nodes live:
 ````
-kubectl --kubeconfig kubeconfig get nodes
+$ kubectl --kubeconfig kubeconfig get nodes
+NAME            STATUS   ROLES                  AGE     VERSION
+ip-10-0-0-138   Ready    <none>                 90s     v1.22.1
+ip-10-0-0-22    Ready    control-plane,master   2m42s   v1.22.1
 ````
 
