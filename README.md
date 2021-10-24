@@ -1,0 +1,1 @@
+This is an Infrastructure as Code (IaC) collection of Terraform scripts to create a Kubernentes cluster of one master and one worker node for lab work and testing.
