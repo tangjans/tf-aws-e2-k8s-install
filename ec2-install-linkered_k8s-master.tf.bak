@@ -1,0 +1,24 @@
+
+
+resource "null_resource" "istio_k8s_master" {
+  depends_on = [
+    null_resource.k8s_bootstrap_master,null_resource.k8s_worker_join_cluster
+  ]
+  connection {
+    type        = "ssh"
+    host        = aws_instance.k8s_cp.public_ip
+    user        = "ubuntu"
+    port        = "22"
+    private_key = tls_private_key.k8s_private_key.private_key_pem
+    agent       = false
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "curl -L https://istio.io/downloadIstio | sh -",
+      "./istio*/bin/istioctl install --set profile=demo -y",
+      "kubectl label namespace default istio-injection=enabled"
+    ]
+  }
+}
+

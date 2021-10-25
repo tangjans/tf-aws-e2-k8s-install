@@ -12,7 +12,7 @@ resource "null_resource" "k8s_bootstrap_master" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo curl https://raw.githubusercontent.com/tangjans/tf-aws-e2-k8s-install/main/scripts/k8s-master.sh | sh"
+      "sudo curl https://raw.githubusercontent.com/tangjans/tf-aws-e2-k8s-install/main/scripts/k8s-master-no-CNI.sh | sh"
     ]
   }
 }
@@ -29,7 +29,7 @@ resource "null_resource" "k8s_bootstrap_worker" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo curl https://raw.githubusercontent.com/tangjans/tf-aws-e2-k8s-install/main/scripts/k8s-worker.sh | sh"
+      "sudo curl https://raw.githubusercontent.com/tangjans/tf-aws-e2-k8s-install/main/scripts/k8s-worker-no-CNI.sh | sh"
     ]
   }
 }
